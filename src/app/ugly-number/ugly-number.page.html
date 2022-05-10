@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>uglyNumber</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   
+    <ion-grid>
+      <ion-row>
+        
+          <ion-item>
+            <ion-label position="stacked"> n </ion-label>
+            <ion-input  [(ngModel)]="n"></ion-input>
+          </ion-item>
+      
+        
+          <ion-row>
+            <ion-button  (click)="uN(n)">Calcola</ion-button>
+          </ion-row>
+          <ion-row>
+         <h3>il {{n}}esimo numero brutto è {{risultato}} </h3>
+        </ion-row>
+      </ion-row>
+    </ion-grid>
+  
+</ion-content>
