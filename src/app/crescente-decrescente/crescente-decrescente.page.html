@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>crescenteDecrescente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-col class="ion-text-center">
+      <h2>Ordina un array</h2>
+    </ion-col>   
+    <ion-col>
+      <ion-row>
+        <ion-item>
+          <ion-label position="stacked"> inserisci numeri </ion-label>
+          <ion-input [(ngModel)]="n"></ion-input>
+        </ion-item>
+    
+      
+          <ion-button size="small" (click)="riempiArray()">inserisci</ion-button>
+          
+        </ion-row>
+    </ion-col>   
+    <ion-col> 
+        <ion-row>
+          <ion-button size="small" (click)="stampa()">decrescente</ion-button>
+          <h3> {{messaggio}} </h3>
+        </ion-row>
+       
+        <ion-row>
+          <ion-button size="small" (click)="stampa2()">crescente</ion-button>
+          <h3> {{messaggio2}} </h3>
+        </ion-row>
+      </ion-col> 
+  </ion-grid>
+</ion-content>
