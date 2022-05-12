@@ -18,7 +18,7 @@ riempiArray(){
   
 
 
-decrescente(a:number []):number[]{
+decrescente():number[]{
   for (let i=0; i< this.a.length-1; i++) {
     let indice = i;
     for (let j=i+1; j<this.a.length; j++)
@@ -26,28 +26,28 @@ decrescente(a:number []):number[]{
           indice = j;
     
     let b = this.a[indice];  
-    a[indice] = this.a[i];
+    this.a[indice] = this.a[i];
     this.a[i] = b;
   }return this.a
  }
 
- crescente(a:number []){
-  for (let i=0; i< a.length-1; i++) {
+ crescente():number[]{
+  for (let i=0; i< this.a.length-1; i++) {
     let indice = i;
-    for (let j=i+1; j<a.length; j++)
-       if (a[j] < a[indice]) 
+    for (let j=i+1; j<this.a.length; j++)
+       if (this.a[j] < this.a[indice]) 
           indice = j;
     
-    let b = a[indice];  
-    a[indice] = a[i];
-    a[i] = b;
-  }return a
+    let b = this.a[indice];  
+    this.a[indice] = this.a[i];
+    this.a[i] = b;
+  }return this.a
  }
  stampa(){
-  this.messaggio = this.crescente(this.a)
+  this.messaggio = this.crescente()
   }
   stampa2(){
-    this.messaggio2 = this.decrescente(this.a)
+    this.messaggio2 = this.decrescente()
   }
 
 
